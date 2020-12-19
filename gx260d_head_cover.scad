@@ -64,6 +64,18 @@ module outcut1() {
 module outcut2() {
     cube(8);
 }
+
+module akailogo() {
+    rotate([0,180,0])
+      scale([0.05,0.05,0.05])
+        import("akai.svg", center=true);
+}
+
+module gx260d() {
+    rotate([0,180,0])
+      scale([2,1,1])
+        import("gx260d.svg", center=true);
+} 
     
 module all() {
     union() {
@@ -83,6 +95,14 @@ module all() {
             
             translate([163,-63, 12])
                 outcut2();
+            
+            translate([107.5 ,-20, 0])
+                linear_extrude(height=1)
+                    akailogo();
+            
+            translate([107.5 ,-37, 0])
+                linear_extrude(height=1)
+                    gx260d();
            
         };
         
