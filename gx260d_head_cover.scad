@@ -32,12 +32,12 @@ module topshield() {
     cube([195, 2, 35]);
 }
 
-module holdertube() {
+module holderhole() {
     union() {
         difference(){
-            cylinder(32, d=12, $fn=50);
+            cylinder(32, d=11, $fn=50);
             translate([0, 0, 10])
-                cylinder(22, d=8);
+                cylinder(22, d=7, $fn=50);
         }
         translate([-1, 5, 0])
             cube([2,6,32]);
@@ -89,11 +89,11 @@ module all() {
         translate([10,-2,0])
             topshield();
         
-        translate([20, -12, 0])
-            holdertube(); 
+        translate([19, -11, 0])
+            holderhole(); 
         
-        translate([195, -12, 0])
-            holdertube(); 
+        translate([196, -11, 0])
+            holderhole(); 
         
         translate([107, -47, 0])
             holder();
