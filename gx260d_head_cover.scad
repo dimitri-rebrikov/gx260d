@@ -17,27 +17,31 @@ module inside() {
     polygon(
         points=[ 
             [0, 0], 
-            [207, 0], 
-            [207, -15], 
-            [175, -52], 
-            [115, -57],
-            [100, -57],
-            [33, -52], 
-            [0, -15]         
+            [211, 0], 
+            [211, -17], 
+            [176, -56], 
+            [115, -61],
+            [100, -61],
+            [35, -56], 
+            [0, -17]         
         ]
     );
 };
 
 module topshield() {
-    cube([195, 4, 35]);
+    cube([195, 2, 35]);
 }
 
 module holdertube() {
-    difference(){
-        cylinder(32, d=12, $fn=50);
-        translate([0, 0, 10])
-            cylinder(22, d=7);
-    }
+    union() {
+        difference(){
+            cylinder(32, d=12, $fn=50);
+            translate([0, 0, 10])
+                cylinder(22, d=8);
+        }
+        translate([-1, 5, 0])
+            cube([2,6,32]);
+    };
 };
 
 module holder() {
@@ -68,8 +72,8 @@ module all() {
             linear_extrude(height=20)
                 outside();
             
-            translate([4,-4,3])
-                linear_extrude(height=17)
+            translate([2,-2,2])
+                linear_extrude(height=18)
                     inside();
             
             translate([107,-55, 20])
@@ -83,7 +87,7 @@ module all() {
            
         };
         
-        translate([10,-4,0])
+        translate([10,-2,0])
             topshield();
         
         translate([20, -12, 0])
@@ -97,6 +101,6 @@ module all() {
     };
 };
 
+// projection is for creating a dxf file to measure the object
 //projection(cut=true) translate([0,0, -15])
-
 all();
