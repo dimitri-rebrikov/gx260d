@@ -65,7 +65,6 @@ module outcut2() {
     cube(8);
 }
     
-
 module all() {
     union() {
         difference(){
