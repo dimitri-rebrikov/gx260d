@@ -1,0 +1,10 @@
+3d_print_alu_foil.jpg
+3d_print_back.jpg
+3d_print_front.jpg
+3d_print_holder_hole.jpg
+3d_print_mounted.jpg
+list.txt
+original_1.jpg
+original_2.jpg
+original_3.jpg
+original_4.jpg
