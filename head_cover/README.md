@@ -1,9 +1,9 @@
 # head_cover
 Repair information for the Head Cover of the Akai GX-260D Stereo Tape Deck (1973)
 
-- gx260d_head_cover.scad : the 3D schematic for the head cover replacement.
+- gx260d_head_cover.scad : the 3D schematic for the head cover replacement. You will need to install the polyRound library from https://github.com/Irev-Dev/Round-Anything in your OpenSCAD to run it.
 - gx260d_head_cover.stl : the STL file generated from the scad file
-- akai.svh : the Akai logo vector graphic used in gx260d_head_cover.scad 
+- akai.svg : the Akai logo vector graphic used in gx260d_head_cover.scad 
 - gx260d.svg : the model designation vector graphic used in gx260d_head_cover.scad 
 - the front picture of printed head cover : ![3d_print_front.jpg](3d_print_front.jpg) 
 - the rear picture of the printed head cover : ![3d_print_back.jpg](3d_print_back.jpg)
