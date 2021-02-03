@@ -1,13 +1,15 @@
+$fn=50;
+
 module outside() {
     polygon(
         points=[ 
             [0, 0], 
             [215, 0], 
             [215, -20], 
-            [180, -60], 
-            [115, -65],
-            [100, -65],
-            [36, -60], 
+            [180, -57], 
+            [115, -62],
+            [100, -62],
+            [36, -57], 
             [0, -20]         
         ]
     );
@@ -19,10 +21,10 @@ module inside() {
             [0, 0], 
             [211, 0], 
             [211, -17], 
-            [176, -56], 
-            [115, -61],
-            [100, -61],
-            [35, -56], 
+            [176, -53], 
+            [115, -58],
+            [100, -58],
+            [35, -53], 
             [0, -17]         
         ]
     );
@@ -35,9 +37,9 @@ module topshield() {
 module holderhole() {
     union() {
         difference(){
-            cylinder(32, d=11, $fn=50);
+            cylinder(32, d=11);
             translate([0, 0, 10])
-                cylinder(22, d=7, $fn=50);
+                cylinder(22, d=7);
         }
         translate([-1, 5, 0])
             cube([2,6,32]);
@@ -90,10 +92,10 @@ module all() {
             translate([107,-55, 20])
                 outcut1();
             
-            translate([44,-63, 12])
+            translate([46,-63, 12])
                 outcut2();
             
-            translate([163,-63, 12])
+            translate([161,-63, 12])
                 outcut2();
             
             translate([107.5 ,-20, 0])
